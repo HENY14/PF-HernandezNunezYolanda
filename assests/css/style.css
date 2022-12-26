@@ -2,29 +2,12 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
-
+/*Responsive Mobile*/
 *{
     margin: 0px;
     padding: 0px;
 }
-
-
-h1{
-    color:rgb(241, 78, 19);
-    font-size: 25px;
-    font-weight: 200;
-    font-family: 'Lobster', cursive;
-    text-align: center;
-}
-
-h2{
-    color:rgb(27, 87, 59);
-    font-size: 20px;
-    font-weight: 100;
-    font-family: 'Lobster', cursive;
-    text-align: center;
-}
-
+/*Contenedor*/
 .contenedor{
     width: 100%;
     height: 100vh;
@@ -40,6 +23,7 @@ h2{
     ;
 }
 
+/*Contenedor Modificado*/
 .contenedor--mod{
     width: 100%;
     height: 100vh;
@@ -64,12 +48,12 @@ h2{
     background-image: url(../img/26800.jpg);
     background-size: contain;
 }
-
+/*Logo de cabecera*/
 .logo{
     width: 30%;
     text-align: center;
 }
-
+/*Imagen del logo*/
 .logo_foto{
     width: 100px;
 }
@@ -95,35 +79,60 @@ h2{
 .menu ul li a{
     color: #172c66 ;
 }
+/*Títulos de paginas*/
 
 .titulo{
     grid-area: titulo;
 }
 
+/*Textos de Título*/
+h1{
+    color:rgb(241, 78, 19);
+    font-size: 25px;
+    font-weight: 200;
+    font-family: 'Lobster', cursive;
+    text-align: center;
+}
+
+h2{
+    color:rgb(27, 87, 59);
+    font-size: 20px;
+    font-weight: 100;
+    font-family: 'Lobster', cursive;
+    text-align: center;
+}
+
+/*Sección de productos*/
 .productos{
     grid-area: productos;
     display:flex;
     flex-direction: column;
     justify-content: center;
+   
+    background: radial-gradient(circle, rgba(230,174,238,1) 0%, rgba(148,228,233,1) 100%);
 }
-
+/*Clases categorias de productos e información*/
 .categoria, .info__div{
     width: 100%;
-    padding: 20px;
+    padding: 15px;
 }
 
+/*Imagenes de productos e información*/
 .categoria__foto, .info__foto{
-    width: 100%;
-    text-align: center;
+    width: 80%;
+    margin-left: 50px;
+    align-items: center;
+    
 }
 
+/* Nombre de productos*/
 .nombre{ 
     color: rgb(226, 25, 25);
     font-size: 17px;     
     text-align: center;
     font-family: 'Lobster';
+   
 }
-
 
 /*Clase descripción de categorias de productos*/
 .descripcion{
@@ -141,30 +150,33 @@ h2{
     font-family: Arial, Helvetica, sans-serif;
 }
 
-
+/*Sección de contacto*/
 #contacto{
     grid-area:contacto;
     display:flex;
     flex-direction: row;
     background-color:#f3d2c1;
 }
-
+/*Información de contacto*/
 .info__contacto{
     width: 45%;
     vertical-align:text-top; 
      font-size: 18px;
 }
 
+/*Video de contacto*/
 #video_info{
     width: 80%;
 }
 
+/*Formulario de contacto*/
 #formulario{
     grid-area:formulario;
     padding: 15px;
     font-size: 18px;
 }
 
+/*Sección Pie de página*/
 .pie{
     grid-area:pie;
     background-color:#f3d2c1;
@@ -173,6 +185,7 @@ h2{
     justify-content: center;
 }
 
+/*Iconos de pie de página*/
 .icono{
     padding: 35px;
 }
@@ -188,8 +201,21 @@ h2{
     display:none;
 }
 
+/*Responsive Tablet*/
  @media only screen and (min-width: 768px){
+    
+    /*Menu*/
+    .menu ul{
+        font-size: 20px;
+    }
 
+    /*Icono de inicio en menu*/
+    .home{
+        width: 50px;
+        display: block;
+    }  
+    
+    /*Títulos de paginas*/
     h1{
         font-size: 30px;
     }
@@ -198,44 +224,46 @@ h2{
         font-size: 20px;
     }
 
-    .menu ul{
-        font-size: 20px;
-    }
-      
+    /*Sección de productos*/
     .productos{
         flex-direction: row;
         justify-content: space-around;
         flex-wrap: wrap;
-    }
 
+    }
+    /*Clases categorias de productos*/      
      .categoria{
         width: 40%;
     }
-
+    /*Imagenes de productos*/
     .categoria__foto{
        width: 100%;
+       margin-left: 0;
        height: 300px;
     }
-    .info__foto{
-        width: 100%;
-        height: 400px;
-     }
+     
+    /*Clase nombre de productos*/
     .nombre{
         font-size: 20px;     
     }
-
+    /*Clase descripción de productos*/   
     .descripcion{
         font-size: 18px;     
      }
 
+    /*Imagen sobre nosotros*/
+    .info__foto{
+        width: 100%;
+        height: 400px;
+     }
+     
+    /*Sobre nosotros */
     .info__div p{
         width: 100%;
         font-size:20px;     
     }
-    .icono{
-        display: none;
-    }
-    
+   
+    /*Contenedor modificados para page contacto*/
     .contenedor--mod{
         grid-template-columns: 50% 50%;
         grid-template-rows: repeat(4, auto);
@@ -247,30 +275,52 @@ h2{
         ;
     }
 
-        
+    /*Clase información de contacto*/
     .info__contacto{
        font-size: 18px;
     }
 
+    /*Clase formulario de contacto*/
      #formulario{
         font-size: 18px;
      }
-
+    
+     /*Texto de pie de página*/
     .pie p{
         display:contents;
         color:#001858;
         font-size: 20px;
         text-align: center;
-    }
-    .home{
-        width: 50px;
-        display: block;
-    }   
-
+    } 
+   /*Ocultar iconos de pie de página*/
+   .icono{
+    display: none;
+}
  }
+ 
 
+ /*Responsive Desktop*/
 @media only screen and (min-width: 1280px){
     
+    /*Cabecera*/
+    .cabecera{
+         flex-direction: row;
+         justify-content: center;
+    }
+    /*Logo de cabecera*/ 
+    .logo{
+        width: 30%;
+        text-align: left;
+    }
+    /*Imagen del logo*/    
+    .logo_foto{
+        width: 150px;
+    }
+    /*Menu*/
+    .menu ul{
+        font-size: 25px;
+    }
+    /*Títulos de paginas*/
     h1{
         font-size: 50px;
     }
@@ -278,37 +328,21 @@ h2{
     h2{
         font-size: 30px;
     }
-    /*Cabecera*/
-    .cabecera{
-         flex-direction: row;
-         justify-content: center;
-    }
-     
-    .logo{
-        width: 30%;
-        text-align: left;
-    }
-        
-    .logo_foto{
-        width: 150px;
-    }
-
-    .menu ul{
-        font-size: 25px;
-    }
-
+    /*Clases categorias de productos*/
     .categoria{
         width: 30%;
         text-align: center;
     }
+    /*Imagenes de productos */
     .categoria__foto{
         width: 100%;
         height:350px;
     }
+    /* Nombre de productos*/
     .nombre{ 
         font-size: 25px;     
     }
-    
+    /*Clase descripción de categorias de productos*/
     .descripcion{
         font-size: 22px;     
      }
@@ -316,16 +350,15 @@ h2{
     .info__div{
         width: 45%;
     }
-
+    /*Clase división sección de información*/
     .info__div p{
         font-size:30px;     
     }
-
-        
+     /*Información de contacto*/   
     .info__contacto{
         font-size: 25px;
      }
- 
+    /*Formulario de contacto*/
       #formulario{
          font-size: 25px;
       }
