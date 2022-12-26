@@ -87,11 +87,19 @@
 
 /*Textos de Título*/
 h1{
+    animation: aparece 5s infinite;
     color:rgb(241, 78, 19);
     font-size: 25px;
     font-weight: 200;
     font-family: 'Lobster', cursive;
     text-align: center;
+}
+/* Anaimación Titulo h1*/
+@keyframes aparece{
+    0%{opacity:0;}
+    50%{opacity:0.5;}
+    75%{opacity:0.75;}
+    100%{opacity:1;}
 }
 
 h2{
@@ -122,16 +130,30 @@ h2{
     width: 80%;
     margin-left: 50px;
     align-items: center;
-    
+    animation: aparecer 5s 1;
 }
-
+/* Anaimación Imagenes*/
+@keyframes aparecer{
+    0%{opacity:0;}
+    50%{opacity:0.5;}
+    75%{opacity:0.75;}
+    100%{opacity:1;}
+}
 /* Nombre de productos*/
 .nombre{ 
     color: rgb(226, 25, 25);
     font-size: 17px;     
     text-align: center;
     font-family: 'Lobster';
-   
+    animation: aparece_Tex 5s 1;
+}
+
+/* Anaimación nombre*/
+@keyframes aparece_Tex{
+    0%{opacity:0;}
+    50%{opacity:0.5;}
+    75%{opacity:0.75;}
+    100%{opacity:1;}
 }
 
 /*Clase descripción de categorias de productos*/
@@ -242,6 +264,12 @@ h2{
        height: 300px;
     }
      
+    /*Trasformación imagenes de productos*/
+    .categoria__foto:hover {
+        border: 4px solid darkred;
+        transform: scale(1.03) translate(-10px, -10px);
+        transition:  0.5s;
+    }
     /*Clase nombre de productos*/
     .nombre{
         font-size: 20px;     
@@ -337,12 +365,6 @@ h2{
     .categoria__foto{
         width: 100%;
         height:350px;
-    }
-     /*Trasformación imagenes de productos*/
-     .categoria__foto:hover {
-        border: 4px solid darkred;
-        transform: scale(1.03) translate(-10px, -10px);
-        transition:  0.5s;
     }
     /* Nombre de productos*/
     .nombre{ 
