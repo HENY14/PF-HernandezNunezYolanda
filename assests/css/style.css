@@ -338,6 +338,12 @@ h2{
         width: 100%;
         height:350px;
     }
+     /*Trasformación imagenes de productos*/
+     .categoria__foto:hover {
+        border: 4px solid darkred;
+        transform: scale(1.03) translate(-10px, -10px);
+        transition:  0.5s;
+    }
     /* Nombre de productos*/
     .nombre{ 
         font-size: 25px;     
