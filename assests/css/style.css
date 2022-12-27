@@ -50,34 +50,12 @@
 }
 /*Logo de cabecera*/
 .logo{
-    width: 30%;
+    width: 70%;
     text-align: center;
 }
 /*Imagen del logo*/
 .logo_foto{
     width: 100px;
-}
-
-/*Menu*/
-.menu ul{
-    font-size: 16px;
-    list-style: none;
-    text-align: center;
-}
-/*Elementos del Menu*/
-.menu ul li {
-    font-weight: bold;
-    display: inline-block;
-    position:relative;
-    padding: 3px;
-}
-/*Enlaces del Menu*/
-.menu ul li a:hover{
-    color: orange ;
-}
-/*Textos del Menu*/
-.menu ul li a{
-    color: #172c66 ;
 }
 /*Títulos de paginas*/
 
@@ -87,13 +65,14 @@
 
 /*Textos de Título*/
 h1{
-    animation: aparece 5s infinite;
     color:rgb(241, 78, 19);
     font-size: 25px;
     font-weight: 200;
     font-family: 'Lobster', cursive;
     text-align: center;
+    animation: aparece 5s infinite;
 }
+
 /* Anaimación Titulo h1*/
 @keyframes aparece{
     0%{opacity:0;}
@@ -101,7 +80,6 @@ h1{
     75%{opacity:0.75;}
     100%{opacity:1;}
 }
-
 h2{
     color:rgb(27, 87, 59);
     font-size: 20px;
@@ -110,13 +88,13 @@ h2{
     text-align: center;
 }
 
+
 /*Sección de productos*/
 .productos{
     grid-area: productos;
     display:flex;
     flex-direction: column;
     justify-content: center;
-   
     background: radial-gradient(circle, rgba(230,174,238,1) 0%, rgba(148,228,233,1) 100%);
 }
 /*Clases categorias de productos e información*/
@@ -219,22 +197,19 @@ h2{
     display:none;
  }
 
-.home{
+.icono_menu{
     display:none;
 }
 
 /*Responsive Tablet*/
  @media only screen and (min-width: 768px){
     
-    /*Menu*/
-    .menu ul{
-        font-size: 20px;
-    }
-
     /*Icono de inicio en menu*/
-    .home{
+    .icono_menu{
         width: 50px;
         display: block;
+        margin-left: auto;
+        margin-right: auto;
     }  
     
     /*Títulos de paginas*/
@@ -243,7 +218,7 @@ h2{
     }
 
     h2{
-        font-size: 20px;
+        font-size: 25px;
     }
 
     /*Sección de productos*/
@@ -337,17 +312,15 @@ h2{
     }
     /*Logo de cabecera*/ 
     .logo{
-        width: 30%;
+        width: 50%;
         text-align: left;
+        
     }
     /*Imagen del logo*/    
     .logo_foto{
         width: 150px;
     }
-    /*Menu*/
-    .menu ul{
-        font-size: 25px;
-    }
+    
     /*Títulos de paginas*/
     h1{
         font-size: 50px;

@@ -5,11 +5,16 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Pharma Life: Cuidamos tu salud</title>
-        <link rel ="stylesheet" href ="assests/css/style.css"/>
+        <!-- Link Google Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
-    </head>
+        <!-- CDN Bootstrap -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+         <!-- Link css -->
+        <link rel ="stylesheet" href ="assests/css/style.css"/>  
+  </head>
 
     <body>
         <div class="contenedor">
@@ -19,16 +24,35 @@
                 <div class="logo">
                     <img class="logo_foto" src="assests\img\kisspng-herbalism.png" alt="Logo">
                 </div>
-                <!-- Menu de navegación -->
+                <!-- Menu Hamburguesa -->
                 <div class="menu">
-                    <nav>
-                        <ul>
-                            <li><a href="assests/pages/acercade.html">Sobre nosostros</a></li>
-                            <li><a href="assests/pages/medicamentos.html">Medicamentos</a></li>
-                            <li><a href="assests/pages/cuidado.html">Cuidado Personal</a></li>
-                            <li><a href="assests/pages/complementos.html">Suplementos</a></li>
-                            <li><a href="assests/pages/contacto.html">Contacto</a></li>
-                        </ul>
+                    <nav class="navbar navbar-expand-lg bg-transparent">
+                        <div class="container-fluid">
+                            <a class="navbar-brand" href="#"></a>
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                                <ul class="navbar-nav">
+                                    <li class="nav-item">
+                                        <a class="nav-link active text-dark link-warning fs-5 fw-bolder" aria-current="page" href="assests/pages/acercade.html"><img class="icono_menu" src="assests/img/info.png" alt="Icono de Información">Sobre nosostros</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link text-dark link-warning fs-5 fw-bolder"       href="assests/pages/medicamentos.html"><img class="icono_menu" src="assests/img/medication.png" alt="Icono de Medicamentos">Medicamentos</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link text-dark link-warning fs-5 fw-bolder"       href="assests/pages/cuidado.html"><img class="icono_menu" src="assests/img/care.png" alt="Icono de Cuidado">Cuidado Personal</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link text-dark link-warning fs-5 fw-bolder"       href="assests/pages/complementos.html"><img class="icono_menu" src="assests/img/vitamin.png" alt="Icono de Vitaminas">Suplementos</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link text-dark link-warning fs-5 fw-bolder"       href="assests/pages/contacto.html"><img class="icono_menu" src="assests/img/contacto.png" alt="Icono de Contacto">Contacto</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                     </nav>
                 </div>
             </header>
@@ -59,7 +83,7 @@
             </section>
             <!-- Pie de página -->
             <footer class="pie">
-                <div class="icono">
+		        <div class="icono">
                     <img class="pie__icono" src="assests\img\mail.png" alt="Icono e-Mail">
                 </div>
                 <div class="icono">

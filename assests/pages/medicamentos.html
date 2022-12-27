@@ -1,93 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Pharma Life: Cuidamos tu salud</title>
-        <link rel ="stylesheet" href ="../css/style.css"/> 
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
-    </head>
-    
-   
-    <body>
-        <div class="contenedor">
-            <!-- Encabezado -->
-            <header class="cabecera">
-                <!--  Logo -->
-                <div class="logo">
-                    <img class="logo_foto" src="../img/kisspng-herbalism.png" alt= "Logo">
-                </div>
-                <!-- Menu de navegación -->
-                <div class="menu">
-                    <nav>
-                        <ul>
-                            <li><a href="../../index.html"><img class="home" src="../img/homepage.png">Inicio</a></li>
-                            <li><a href="acercade.html">Sobre nosostros</a></li>
-                            <li><a href="cuidado.html">Cuidado Personal</a></li>
-                            <li><a href="complementos.html">Suplementos</a></li>
-                            <li><a href="contacto.html">Contacto</a></li>
-                        </ul>
-                    </nav>
-                </div>
-            </header>
-            <!-- Titulo del contenedor principal -->            
-            <main class="titulo">
-                <!-- Titulo del contenedor principal -->
-                <h1>PharmaLife</h1>
-                <br />
-                <h2>Medicamentos</h2>
-                <br />
-            </main>
-            <!-- Categoria de Productos -->
-            <section class="productos">
-                <div class="categoria">
-                    <p class="nombre">Antibióticos</p>
-                    <img class="categoria__foto" src="../img/syringe-g524f79f32_1920.jpg" alt = "Medicamentos para infecciones bacterianas">
-                    <p class="descripcion">Medicamentos para la prevención y el tratamiento de infecciones bacterianas</p>
-                </div>
-                <div class="categoria">
-                    <p class="nombre">Antinflamatorios</p>
-                    <img class="categoria__foto" src="../img/pexels-11361813.jpg" alt = "Medicamentos para la inflamación">
-                    <p class="descripcion">Medicamentos para aliviar el dolor y reducir la inflamación</p>
-                </div>
-                <div class="categoria">
-                    <p class="nombre">Antigripales</p>
-                    <img class="categoria__foto" src="../img/pexels-3850689.jpg" alt = "Medicamentospara resfriados y gripe">
-                    <p class="descripcion">Medicamentos para el tratamiento de resfriados y gripe</p>
-                </div>
-                <div class="categoria">
-                    <p class="nombre">Especiales</p>
-                    <img class="categoria__foto" src="../img/medicamentos_p.jpg" alt = "Medicamentos para tratamientos especiales">
-                    <p class="descripcion">Medicamentos para el tratamiento de enfermedades complejas</p>
-                </div>
-                <div class="categoria">
-                    <p class="nombre">Expectorantes y Mucolíticos</p>
-                    <img class="categoria__foto" src="../img/2321.jpg" alt = "Medicamentos para para la tos">
-                    <p class="descripcion">Medicamentos para el tratamiento de la tos y eliminación de las secreciones
-                        bronquiales</p>
-                </div>
-                <div class="categoria">
-                    <p class="nombre">Antipíricos</p>
-                    <img class="categoria__foto" src="../img/aid-g0591d9f6d_1920.jpg" alt = "Medicamentos para reducir el dolor">
-                    <p class="descripcion">Medicamentos para el tratamiento de la fiebre y dolor</p>
-                </div>
-            </section>
-            <!-- Pie de página -->
-            <footer class="pie">
-                <div class="icono">
-                    <img class="pie__icono" src="../img/mail.png" alt="Icono e-Mail">
-                </div>
-                <div class="icono">
-                    <img class="pie__icono" src="../img/phone.png" alt="Icono Teléfono">
-                </div>
-                <div class="icono">
-                    <img class="pie__icono" src="../img/contact.png" alt="Icono Contacto">
-                </div>
-                <p>Pharmalife - México 2022</p>
-            </footer>
-        </div>
-    </body>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pharma Life: Cuidamos tu salud</title>
+   <!-- Link Google Fonts -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+   <!-- CDN Bootstrap -->
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+       integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <!-- Link css -->
+   <link rel="stylesheet" href="../css/style.css" />
+</head>
+
+
+<body>
+    <div class="contenedor">
+        <!-- Encabezado -->
+        <header class="cabecera">
+            <!--  Logo -->
+            <div class="logo">
+                <img class="logo_foto" src="../img/kisspng-herbalism.png" alt="Logo">
+            </div>
+            <!-- Menu Hamburguesa -->
+            <div class="menu">
+                <nav class="navbar navbar-expand-lg bg-transparent">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="#"></a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a class="nav-link active text-dark link-warning fs-5 fw-bolder" aria-current="page" href="../../index.html"><img class="icono_menu" src="../img/homepage.png"  alt="Icono de Inicio">Inicio</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark link-warning fs-5 fw-bolder" href="acercade.html"><img class="icono_menu" src="../img/info.png" alt="Icono de Información">Sobre nosotros</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark link-warning fs-5 fw-bolder" href="cuidado.html"><img class="icono_menu" src="../img/care.png" alt="Icono de Cuidado">Cuidado Personal</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark link-warning fs-5 fw-bolder" href="complementos.html"><img class="icono_menu" src="../img/vitamin.png" alt="Icono de Vitaminas">Suplementos</a>
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark link-warning fs-5 fw-bolder" href="contacto.html"><img class="icono_menu" src="../img/contacto.png" alt="Icono de Contacto">Contacto</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <!-- Titulo del contenedor principal -->
+        <main class="titulo">
+            <!-- Titulo del contenedor principal -->
+            <h1>PharmaLife</h1>
+            <br />
+            <h2>Medicamentos</h2>
+            <br />
+        </main>
+        <!-- Categoria de Productos -->
+        <section class="productos">
+            <div class="categoria">
+                <p class="nombre">Antibióticos</p>
+                <img class="categoria__foto" src="../img/syringe-g524f79f32_1920.jpg"
+                    alt="Medicamentos para infecciones bacterianas">
+                <p class="descripcion">Medicamentos para la prevención y el tratamiento de infecciones bacterianas</p>
+            </div>
+            <div class="categoria">
+                <p class="nombre">Antinflamatorios</p>
+                <img class="categoria__foto" src="../img/pexels-11361813.jpg" alt="Medicamentos para la inflamación">
+                <p class="descripcion">Medicamentos para aliviar el dolor y reducir la inflamación</p>
+            </div>
+            <div class="categoria">
+                <p class="nombre">Antigripales</p>
+                <img class="categoria__foto" src="../img/pexels-3850689.jpg" alt="Medicamentospara resfriados y gripe">
+                <p class="descripcion">Medicamentos para el tratamiento de resfriados y gripe</p>
+            </div>
+            <div class="categoria">
+                <p class="nombre">Especiales</p>
+                <img class="categoria__foto" src="../img/medicamentos_p.jpg"
+                    alt="Medicamentos para tratamientos especiales">
+                <p class="descripcion">Medicamentos para el tratamiento de enfermedades complejas</p>
+            </div>
+            <div class="categoria">
+                <p class="nombre">Expectorantes y Mucolíticos</p>
+                <img class="categoria__foto" src="../img/2321.jpg" alt="Medicamentos para para la tos">
+                <p class="descripcion">Medicamentos para el tratamiento de la tos y eliminación de las secreciones
+                    bronquiales</p>
+            </div>
+            <div class="categoria">
+                <p class="nombre">Antipíricos</p>
+                <img class="categoria__foto" src="../img/aid-g0591d9f6d_1920.jpg"
+                    alt="Medicamentos para reducir el dolor">
+                <p class="descripcion">Medicamentos para el tratamiento de la fiebre y dolor</p>
+            </div>
+        </section>
+        <!-- Pie de página -->
+        <footer class="pie">
+            <div class="icono">
+                <img class="pie__icono" src="../img/mail.png" alt="Icono e-Mail">
+            </div>
+            <div class="icono">
+                <img class="pie__icono" src="../img/phone.png" alt="Icono Teléfono">
+            </div>
+            <div class="icono">
+                <img class="pie__icono" src="../img/contact.png" alt="Icono Contacto">
+            </div>
+            <p>Pharmalife - México 2022</p>
+        </footer>
+    </div>
+</body>
+
 </html>
