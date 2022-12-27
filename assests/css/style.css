@@ -50,7 +50,7 @@
 }
 /*Logo de cabecera*/
 .logo{
-    width: 70%;
+    width: 30%;
     text-align: center;
 }
 /*Imagen del logo*/
@@ -98,13 +98,20 @@ h2{
     background: radial-gradient(circle, rgba(230,174,238,1) 0%, rgba(148,228,233,1) 100%);
 }
 /*Clases categorias de productos e información*/
-.categoria, .info__div{
+.categoria{
     width: 100%;
     padding: 15px;
 }
 
+.info__div{
+    width: 80%;
+    padding: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 /*Imagenes de productos e información*/
-.categoria__foto, .info__foto{
+.categoria__foto{
     width: 80%;
     margin-left: 50px;
     align-items: center;
@@ -204,15 +211,7 @@ h2{
 /*Responsive Tablet*/
  @media only screen and (min-width: 768px){
     
-    /*Icono de inicio en menu*/
-    .icono_menu{
-        width: 50px;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-    }  
-    
-    /*Títulos de paginas*/
+   /*Títulos de paginas*/
     h1{
         font-size: 30px;
     }
@@ -312,16 +311,24 @@ h2{
     }
     /*Logo de cabecera*/ 
     .logo{
-        width: 50%;
+        width: 35%;
         text-align: left;
         
     }
     /*Imagen del logo*/    
     .logo_foto{
-        width: 150px;
+        width: 120px;
     }
+
+     /*Icono de inicio en menu*/
+     .icono_menu{
+        width: 35px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }  
     
-    /*Títulos de paginas*/
+        /*Títulos de paginas*/
     h1{
         font-size: 50px;
     }
@@ -353,7 +360,7 @@ h2{
     }
     /*Clase división sección de información*/
     .info__div p{
-        font-size:30px;     
+        font-size:25px;     
     }
      /*Información de contacto*/   
     .info__contacto{
