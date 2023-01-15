@@ -1,0 +1,16 @@
+@use '_commons' as c;
+
+/*Contenedor*/
+.contenedor {
+    @include c.grillas(c.$ancho-contenido,4, "cabecera" "titulo" "productos" "pie");
+}
+
+/*Contenedor Modificado*/
+.contenedor--mod {
+    @include c.grillas(c.$ancho-contenido,5, "cabecera" "titulo" "contacto" "formulario" "pie");
+    @media only screen and (min-width: 768px){
+        grid-template-columns: 50% 50%;
+        grid-template-rows: repeat(4, auto);
+        grid-template-areas:"cabecera cabecera" "titulo titulo" "contacto formulario" "pie pie";
+    }
+ }

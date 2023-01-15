@@ -1,0 +1,26 @@
+@use '_commons' as c;
+
+
+/*Sección Pie de página*/
+.pie{
+    @include c.flex-box(pie,row); 
+    background-color: map-get(c.$colores,"fondo_pie");
+    
+    p{
+        display:none;
+        @media only screen and (min-width: 768px){
+            text-align: center;
+            display:contents;
+            color:#001858;
+            font-size: c.$texto-size;
+        }
+    }
+    &__icono{
+        padding: 35px;
+        &__img{
+            width: 40px;
+            @media only screen and (min-width: 768px){display: none;}   
+        }
+    }
+    
+}

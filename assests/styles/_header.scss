@@ -1,0 +1,63 @@
+@use '_commons' as c;
+
+
+/*Cabecera*/
+.cabecera {
+    @include c.flex-box(cabecera, column);
+    background-image: url(../img/26800.jpg);
+    background-size: contain;
+    @media only screen and (min-width: 1280px){
+        flex-direction: row;
+    }
+    .logo {
+        /*Logo de cabecera*/
+        width: calc(c.$ancho-contenido - 70%);
+        text-align: center;
+        @media only screen and (min-width: 1280px){
+            width: calc(c.$ancho-foto - 65%);
+            text-align: left;
+        }
+        &_foto {
+            /*Imagen del logo*/
+            width: 100px;
+            @media only screen and (min-width: 1280px){ width: 120px;}
+        }
+    }
+    .icono_menu {
+         /*Iconos de Menu*/
+        display: none;
+        @media only screen and (min-width: 1280px){
+            display: block;
+            width: 35px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}
+
+/*Títulos de paginas*/
+.titulo {
+    grid-area: titulo;
+}
+
+/*Textos de Título*/
+h1 {
+    @include c.titulos( map-get(c.$colores, "titular"),c.$texto-size,c.$ancho-texto);
+    animation: aparecer 5s infinite;
+    @media only screen and (min-width: 768px){
+        font-size: calc(c.$texto-size + 5px);
+    }
+    @media only screen and (min-width: 1280px){
+        font-size: calc(c.$texto-size + 25px);
+    }
+}
+
+h2 {
+    @include c.titulos( map-get(c.$colores, "subtitulo"),calc(c.$texto-size - 5px),calc(c.$ancho-texto - 100));
+    @media only screen and (min-width: 768px){
+        font-size: c.$texto-size;
+    }
+    @media only screen and (min-width: 1280px){
+        font-size: calc(c.$texto-size + 5px);
+    }
+}
