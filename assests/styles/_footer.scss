@@ -12,7 +12,7 @@
             text-align: center;
             display:contents;
             color:#001858;
-            font-size: c.$texto-size;
+            font-size: calc(c.$texto-size - 5px);
         }
     }
     &__icono{
