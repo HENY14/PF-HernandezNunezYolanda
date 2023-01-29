@@ -1,4 +1,4 @@
-@use '_commons' as c;
+@use 'commons' as c;
 
 /*Sección de productos*/
 .productos {
@@ -18,14 +18,14 @@
         @media only screen and (min-width: 1280px){width: calc(c.$ancho-contenido - 70%);}
         &__foto {
             /*Imagenes de productos e información*/
-            width: calc(c.$ancho-img - 20%);
+            width: calc(c.$ancho-foto - 10%);
             margin-left: 0;
             text-align: center;
             border-radius: 9px;
             animation: aparecer 5s 1;
             @media only screen and (min-width: 768px){
-                width: c.$ancho-img;
-                height: c.$alto-img;
+                width: c.$ancho-foto;
+                height: c.$alto-foto;
                 &:hover {
                     /*Trasformación imagenes de productos*/
                     border: 4px solid map-get(c.$colores, "borde");
@@ -34,8 +34,8 @@
                 }
             }
             @media only screen and (min-width: 1280px){
-                width: c.$ancho-img;
-                height: calc(c.$alto-img + 50px);
+                width: c.$ancho-foto;
+                height: calc(c.$alto-foto + 50px);
             }
         }
         .nombre {

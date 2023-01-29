@@ -57,7 +57,7 @@
 }
 @media only screen and (min-width: 1280px) {
   .cabecera .logo {
-    width: 40%;
+    width: 30%;
     text-align: left;
   }
 }
@@ -170,7 +170,7 @@ h2 {
 }
 @media only screen and (min-width: 768px) {
   .productos .categoria__foto {
-    width: 100%;
+    width: 90%;
     height: 300px;
   }
   .productos .categoria__foto:hover {
@@ -182,7 +182,7 @@ h2 {
 }
 @media only screen and (min-width: 1280px) {
   .productos .categoria__foto {
-    width: 100%;
+    width: 90%;
     height: 350px;
   }
 }
