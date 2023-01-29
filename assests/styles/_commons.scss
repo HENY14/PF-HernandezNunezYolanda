@@ -1,0 +1,69 @@
+/*Libreria de letras*/
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+//Variables 
+$ancho-contenido:100%;
+$ancho-foto:90%;
+$alto-foto: 300px;
+$texto-size:25px;
+$ancho-texto: 200;
+$opacidad:(inicio:0, primera: 0.50, segunda: 0.75, final: 1);
+
+
+//Variables de colores con MAP
+$colores:( 
+    fondo1:rgba(230,174,238,1),
+    fondo2:rgba(148,228,233,1),
+    titular:rgb(241, 78, 19),
+    subtitulo:rgb(27, 87, 59),
+    nombre:rgb(226, 25, 25),
+    texto: black,
+    fondo_pie:#f3d2c1,
+    fondo_con: #fadfd1,
+    borde:darkred,
+    texto_pie:#001858
+);
+
+
+//Mixin para grillas
+@mixin grillas($columna, $filas, $areas){
+    width:$ancho-contenido;
+    height:100vh;
+    display:grid;
+    grid-template-columns: $columna;
+    grid-template-rows:repeat($filas,auto);
+    grid-row-gap:10px;
+    grid-template-areas: $areas;
+}
+
+//Mixin para Flex-box
+@mixin flex-box($area, $direccion){
+    grid-area: $area;
+    display: flex;
+    flex-direction: $direccion;
+    justify-content: center;
+    align-items: center;
+}
+//Mixin para títulos
+@mixin titulos($tex-color, $size, $tex-ancho){
+    color: $tex-color;
+    font-size: $size;
+    font-weight: $tex-ancho;
+    font-family: 'Lobster', cursive;
+    text-align: center;
+
+}
+
+//Mixin para Textos
+
+@mixin textos($text-color, $size-text, $alig-text){
+    color: $text-color;
+    font-size: $size-text;
+    text-align: $alig-text;
+    font-family: Arial, Helvetica, sans-serif,center;
+}

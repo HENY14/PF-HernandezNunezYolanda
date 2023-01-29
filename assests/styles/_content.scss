@@ -1,0 +1,106 @@
+@use 'commons' as c;
+
+/*Sección de productos*/
+.productos {
+    @include c.flex-box(productos,column);
+    background: radial-gradient(circle, map-get(c.$colores, "fondo1") 0%, map-get(c.$colores, "fondo2") 100%);
+    @media only screen and (min-width: 768px){
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    .categoria {
+        /*Clases categorias de productos e información*/
+        width: c.$ancho-contenido;
+        padding: 10px;
+        text-align: center;
+        @media only screen and (min-width: 768px){width: calc(c.$ancho-contenido /2);}
+        @media only screen and (min-width: 1280px){width: calc(c.$ancho-contenido - 70%);}
+        &__foto {
+            /*Imagenes de productos e información*/
+            width: calc(c.$ancho-foto - 10%);
+            margin-left: 0;
+            text-align: center;
+            border-radius: 9px;
+            animation: aparecer 5s 1;
+            @media only screen and (min-width: 768px){
+                width: c.$ancho-foto;
+                height: c.$alto-foto;
+                &:hover {
+                    /*Trasformación imagenes de productos*/
+                    border: 4px solid map-get(c.$colores, "borde");
+                    transform: scale(1.03) translate(-10px, -10px);
+                    transition: 0.5s;
+                }
+            }
+            @media only screen and (min-width: 1280px){
+                width: c.$ancho-foto;
+                height: calc(c.$alto-foto + 50px);
+            }
+        }
+        .nombre {
+            /* Nombre de productos*/
+            @include c.titulos(map-get(c.$colores, "nombre"), calc(c.$texto-size - 8px) , 0);
+            animation: aparecer 5s 1;
+            @media only screen and (min-width: 768px){font-size: calc(c.$texto-size - 5px);}
+            @media only screen and (min-width: 1280px){font-size: c.$texto-size;}
+        }
+        .descripcion {
+            /*Clase descripción de categorias de productos*/
+            @include c.textos(map-get(c.$colores, "subtitulo"),calc(c.$texto-size - 12px), center);
+            @media only screen and (min-width: 768px){ font-size: calc(c.$texto-size - 10px);}
+            @media only screen and (min-width: 1280px){font-size: calc(c.$texto-size - 7px);}
+        }
+
+    }
+    .info__div {
+        /*Clase división sección de información*/
+        width: calc(c.$ancho-contenido - 20%);
+        padding: 15px;
+        margin-left: auto;
+        margin-right: auto;
+        @media only screen and (min-width: 1280px){width: calc((c.$ancho-contenido/2) - 5%);}
+        p {
+            @include c.textos(map-get(c.$colores, "texto"),calc(c.$texto-size - 10px), justify);
+            @media only screen and (min-width: 768px){font-size: calc(c.$texto-size - 5px);}
+            @media only screen and (min-width: 1280px){font-size: c.$texto-size;}
+           
+        }
+    }    
+}
+
+/*Sección de contacto*/
+.contacto {
+    @include c.flex-box(contacto,row);
+    background-color: map-get(c.$colores, "fondo_con");
+    &__info{
+          /*Información de contacto*/ 
+        width: calc(c.$ancho-contenido/2); 
+        vertical-align: text-top;
+        font-size: calc(c.$texto-size - 7px);
+        @media only screen and (min-width: 768px){font-size: calc(c.$texto-size - 5px);}
+        @media only screen and (min-width: 1280px){font-size:c.$texto-size;}
+        #video_info {
+            /*Video de contacto*/
+            width: calc(c.$ancho-contenido - 20%);
+        }
+    }
+
+}
+
+/*Formulario de contacto*/
+#formulario {
+    grid-area: formulario;
+    padding: 15px;
+    font-size: calc(c.$texto-size - 7px);
+    @media only screen and (min-width: 768px){ font-size: calc(c.$texto-size - 5px);}
+    @media only screen and (min-width: 1280px){font-size: c.$texto-size;}
+}
+
+/* Animación Imagenes y texto*/
+@keyframes aparecer {
+    0% {opacity: map-get(c.$opacidad, "inicio");}
+    50% {opacity: map-get(c.$opacidad, "primera");}
+    75% {opacity: map-get(c.$opacidad, "segunda");}
+    100% {opacity: map-get(c.$opacidad, "final");}
+}
